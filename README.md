@@ -226,6 +226,7 @@ print(getHint2('1123','0111'))
 ```
 后两种算法的计算速度和内存占用量都差不多
 
+## #134
 ```
 def canCompleteCircuit(gas,cost):
     remain = list(map(lambda x:x[0]-x[1],zip(gas,cost)))
