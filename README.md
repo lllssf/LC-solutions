@@ -163,7 +163,68 @@ print(firstMissingPositive1([0,1,2,9,8,-1,-2,7,6,4,5,3,223423]))
 ```
 这个在LeetCode测试是16ms，快于100%
 
+## #299
+这道题开始忘了用dict，在计算cow的时候很笨的用了两层循环
 
+```
+def getHint(secret,guess):
+    bull = 0
+    cow = 0
+    index = list(range(len(secret)))
+    # calculate the value of bulls and get rid of its index
+    for i in index[:]:
+        if secret[i] == guess[i]:
+            bull += 1
+            index.remove(i)
+    # get the value of cows
+    for i in index[:]:
+        for j in range(len(guess)):
+            if secret[i] == guess[j] and j in index: # to avoid being counted before
+                cow += 1
+                index.remove(j)
+                break
+    return '%sA%sB' %(bull,cow)
+
+print(getHint('1123','0111'))
+```
+运行速度很慢
+然后在高票答案里发现了一个很简单的解法    
+
+```
+from collections import Counter
+def getHint1(secret,guess):
+    '''
+    use Counter to count guess and secret and sum their overlap.
+    use zip to counter bulls
+    '''
+    s,g=Counter(secret),Counter(guess) #return a dict
+    bull = sum(i == j for i,j in zip(secret,guess))
+    cow = sum((s & g).values()) - bull
+    return '%sA%sB' %(bull,cow)
+
+print(getHint1('1123','0111'))
+```
+与这个解法思路类似用dict的话：
+
+```
+def getHint2(secret,guess):
+    bull = 0
+    cow = 0
+    counts = {} #caiculate the counts of s
+    for i,s in enumerate(secret):
+        if s == guess[i]:
+            bull += 1
+        else:
+            counts[s] = counts.get(s,0) + 1
+    for i,s in enumerate(secret):
+        if guess[i]!= s and counts.get(guess[i],0)!=0:
+            cow += 1
+            counts[guess[i]] -= 1
+    return '%sA%sB' %(bull,cow)
+
+print(getHint2('1123','0111'))
+```
+后两种算法的计算速度和内存占用量都差不多
 
 
 
