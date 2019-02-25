@@ -311,7 +311,15 @@ def containDuplicate1(nums):
 > set()创建一个无序不重复元素集
 
 ### #55
-与#134有点类似，开始被绕住了，其实只要考虑每一步的最远距离即可
+> **广度优先搜索BFS**(breadth-first search) 适用于解决“**最短路径问题**”(shortest-path problem)。解决这类问题：
+>1. 使用图来建立问题模型
+>2. 使用广度优先搜索解决问题  
+
+>广度优先搜索算法可帮助回答两类问题：
+>1. 从节点A出发，有前往节点B的路径吗？
+>2. 从节点A出发，前往节点B哪条路径最短？
+
+这道题就是路径存在与否问题，可以依据当前最远到达距离与下一节点标号作对比。我一开始想得太过复杂了。
 
 ```
 def canJump(nums):
@@ -321,4 +329,19 @@ def canJump(nums):
             return False
         far = max(far,i+step)
     return True
+```
+### #45
+这道题就是最短路径问题，就用到了BFS，将当前能到达的点作为第一维度的图，由第一维度才能到达的为第二维度等等以此划分，最少节点到达的路径即为最短路径。
+
+```
+def jump(nums):
+    node_start,node_end,farest,steps = 0,0,0,0
+    while node_end < len(nums)-1:
+        steps += 1
+        for i in range(node_start,node_end+1):
+            if i+nums[i] > len(nums)-1:
+                return steps
+            farest = max(farest,i+num[i])
+        node_end,node_start = farest,node_end+1
+    return steps
 ```
