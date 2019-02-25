@@ -1,6 +1,6 @@
-# Leetcode solution
-
-## #27
+# Array
+## Primary
+### #27
 
 ```
 # -*- coding: utf-8 -*-
@@ -19,7 +19,7 @@ for x in nums:
 ```
 > 我们通常尽量避免修改一个正在进行遍历的列表，避免这种问题的方法是使用**切片操作克隆这个list**
 
-## #26
+### #26
 
 ```
 def removeDuplicates(nums):
@@ -56,7 +56,7 @@ dupnums = nums
 >这样不能复制nums，只能为现有list引入一个新的名称。
 
 我用了列表推导式新建了一个与nums一样的list，也可以用copy库，但我发现这样的时间少一些，而且占用内存少。
-## #80
+### #80
 
 因为都是有序数列所以和上一题思路一样
 ```
@@ -74,7 +74,7 @@ print(removeDuplicates([0,0,1,1,1,2,2,3,3,3]))
 
 
 ```
-## #189
+### #189
 
 ```
 def rotate(nums,k):
@@ -111,7 +111,7 @@ print(rotate_2([1,2,3,4,5,6,7],3))
 ```
 reversed()返回的是一个iterator，可以反转tuple,string,list,range
 
-## #41
+### #41
 
 ```
 # -*- coding: utf-8 -*-
@@ -163,7 +163,7 @@ print(firstMissingPositive1([0,1,2,9,8,-1,-2,7,6,4,5,3,223423]))
 ```
 这个在LeetCode测试是16ms，快于100%
 
-## #299
+### #299
 这道题开始忘了用dict，在计算cow的时候很笨的用了两层循环
 
 ```
@@ -226,7 +226,8 @@ print(getHint2('1123','0111'))
 ```
 后两种算法的计算速度和内存占用量都差不多
 
-## #134
+### #134
+
 ```
 def canCompleteCircuit(gas,cost):
     remain = list(map(lambda x:x[0]-x[1],zip(gas,cost)))
@@ -251,7 +252,7 @@ def canComplateCircuit1(gas,cost):
             start,accumulate = i+1,0
     return start if overall>0 else -1
 ```
-## #274
+### #274
 关于h指数的定义，先看了百度百科：
 > 被引次数从高到低排列，直到谋篇论文的序号大于该论文被引次数，那个序号减去1就是h
 
@@ -270,7 +271,7 @@ def hIndex(citaions):
 ```
 测试时间16ms，内存占用10.8MB
 
-## #275
+### #275
 与上一题一样，只是用了二分查找
 
 ```
@@ -288,7 +289,8 @@ def hIndex_bi(citations):
     return low-1
 ```
 
-## #217
+
+### #217
 开始我用的前面学到的Counter模块
 
 ```
@@ -307,3 +309,16 @@ def containDuplicate1(nums):
     return len(set(nums)) != len(nums)
 ```
 > set()创建一个无序不重复元素集
+
+### #55
+与#134有点类似，开始被绕住了，其实只要考虑每一步的最远距离即可
+
+```
+def canJump(nums):
+    far = 0
+    for i, step in enumerate(nums):
+        if i > far:
+            return False
+        far = max(far,i+step)
+    return True
+```
