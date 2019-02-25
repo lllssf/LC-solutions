@@ -251,6 +251,23 @@ def canComplateCircuit1(gas,cost):
             start,accumulate = i+1,0
     return start if overall>0 else -1
 ```
+## #274
+关于h指数的定义，先看了百度百科：
+> 被引次数从高到低排列，直到谋篇论文的序号大于该论文被引次数，那个序号减去1就是h
 
+按照这个思路：
+
+```
+def hIndex(citaions):
+    if citaions == [] or citations ==[0]:
+        return 0
+    citaions.sort()
+    citaions.reverse()
+    for h,c in enumerate(citaions):
+        if h+1 > c:
+            return h
+    return len(citaions)
+```
+测试时间16ms，内存占用10.8MB
 
 
