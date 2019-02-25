@@ -288,3 +288,22 @@ def hIndex_bi(citations):
     return low-1
 ```
 
+## #217
+开始我用的前面学到的Counter模块
+
+```
+from collections import Counter
+def containsDupliacte(nums):
+    n = Counter(nums)
+    for num in nums:
+        if n[num] > 1:
+            return True
+    return False
+```
+然后又看到一个很棒的解答：
+
+```
+def containDuplicate1(nums):
+    return len(set(nums)) != len(nums)
+```
+> set()创建一个无序不重复元素集
