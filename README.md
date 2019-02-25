@@ -272,7 +272,7 @@ def hIndex(citaions):
 测试时间16ms，内存占用10.8MB
 
 ### #275
-与上一题一样，只是用了二分查找
+与上一题一样，只是用了**二分查找**
 
 ```
 def hIndex_bi(citations):
