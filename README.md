@@ -345,3 +345,58 @@ def jump(nums):
         node_end,node_start = farest,node_end+1
     return steps
 ```
+### #121
+
+```
+def maxprofit(prices):
+    buy,profit = float('inf'),0
+    for p in prices:
+        buy = min(buy,p)
+        profit = max(profit, p-buy)
+    return profit
+```
+### #122
+
+```
+def maxprofit(prices):
+    buy,profit,date_sell = float('inf'),0,-1
+    for i,p in enumerate(prices):
+        if i > sell:
+            buy = min(buy,p)
+            if p > buy:
+                date_sell = i
+                profit += p-buy
+                buy = p
+    return profit
+```
+还有比较简单的写法：
+
+```
+def maxProfit(prices):
+    return sum(x[0]-x[1] for x in zip(prices[1:],prices[:-1]) if x[0]>x[1] )
+```
+### #123
+开始写得很复杂，后来看到了用**前后遍历**的算法的简单解法，豁然开朗：
+
+```
+def maxProfit(self,prices):
+    n = len(prices)
+    if n <= 1:
+        return 0
+    forward_profit,backward_profit = [0]*n,[0]*n
+    buy = prices[0]
+    for i in range(1,n):
+        buy = min(buy,prices[i])
+        forward_profit[i] = max(forward_profit[i-1],prices[i]-buy)
+
+    sell = prices[-1]
+    for i in range(n-2,-1,-1):
+        sell = max(sell,prices[i])
+        backward_profit[i] = max(backward_profit[i+1],sell-prices[i])
+
+    maxprofit = 0
+    for i in range(n):
+        maxprofit = max(maxprofit,forward_profit[i]+backward_profit[i])
+
+    return maxprofit
+```
