@@ -403,7 +403,7 @@ def maxProfit(self,prices):
 ### #188
 >**动态规划DP**(Dynamic programming),是一种将问题分成子问题，先解决子问题的方法。
 
-这道题我看了各种解法，都不甚明白，后来在discussion里选了速度最快，占用内存最少的一种仔细研究，明白些许。hold[k]是k-1次操作后持有的股票收益减去买股票的金额，profit[k]是完成k次交易后得到的收益。
+这道题我看了各种解法，都不甚明白，后来在discuss里选了速度最快，占用内存最少的一种仔细研究，明白些许。hold[k]是k-1次操作后持有的股票收益减去买股票的金额，profit[k]是完成k次交易后得到的收益。
 
 ```
 def maxProfit(k,prices):
@@ -418,3 +418,21 @@ def maxProfit(k,prices):
             hold[i] = max(hold[i], profit[i-1]-p)
     return profit[k]
 ```
+
+### #309
+按着上一题的思路，开始的解法如下：
+
+```
+def maxprofit(prices):
+    n = len(prices)
+    if n < 2:
+        return 0
+    buy,profit = [float('-inf')]*n,[0]*n
+    buy[0],buy[1] = -prices[0],max(buy[0],prices[1])
+    profit[1] = max(0,prices[1]-prices[0])
+    for i in range(2,n):
+        buy[i] = max(buy[i-1],profit[i-2]-prices[i])
+        profit[i] = max(profit[i-1],buy[i]+prices[i])
+    return profit[-1]
+```
+20ms，10.9MB
