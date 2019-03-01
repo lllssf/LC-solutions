@@ -478,3 +478,41 @@ def trap(height):
             end -= 1
     return water
 ```
+### #334
+我自己的解法是20ms，11MB
+```
+def increasingTriple(nums):
+    n = len(nums)
+    if n < 3: return False
+    i,j,k = 0,1,2
+    while k < n:
+        if nums[i] < nums[j] and nums[j]<nums[k]:
+            return True
+        while nums[i] >= nums[j]:
+            i = j
+            j = i + 1
+            k = i + 2
+            if k > n-1:
+                return False
+        while nums[j] >= nums[k]:
+            k += 1
+            if k > n -1:
+                j,k = j+1, j+2
+                break
+    return False
+```
+Discuss里有一写法更为简单，思路相同：
+
+```
+def increasingTriplet1(nums):
+    first = second = float('inf')
+    for n in nums:
+        if n <= first:
+            first = n
+        elif n <= second:
+            second = n
+        else:
+            return True
+    return False
+```
+16ms，11.2MB
