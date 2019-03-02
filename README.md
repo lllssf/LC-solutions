@@ -537,3 +537,20 @@ def longestConsecutive(nums):
     length_max.append(length)
     return max(length_max)
 ```
+### #164 
+用的和上一题一样的思路，第一次就20ms，11.3MB 
+
+```
+def maximumGap(nums):
+    if len(nums) < 2: return 0
+    nums.sort()
+    gap,maxGap,prev = 0,[],0
+    for n in nums:
+        if n-prev > gap:
+            gap = n-prev
+            maxGap.append(gap)
+            prev = n
+        else: prev = n
+    maxGap.append(gap)
+    return max(maxGap)
+```
