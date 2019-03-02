@@ -554,3 +554,28 @@ def maximumGap(nums):
     maxGap.append(gap)
     return max(maxGap)
 ```
+这题考察的似乎是 **桶排序(Bucket sort)/基数排序（Radix sort)** 算法,参考了最高票的Discuss，108ms，算法复杂度是O(32n)如下：
+
+```
+def radixSort(nums):
+    for i in range(31):
+        onebucket = []
+        zerobucket = []
+        needle = 1 << i 
+        for j in range(len(nums)):
+            if nums[j] & neddle != 0:
+                onebucket.append(nums[j])
+            else:
+                zerobucket.append(nums[j])
+        nums = []
+        nums += zerobucket
+        nums += onebucket 
+    return nums 
+def maxgap(nums):
+    if len(nums) < 2: return 0 
+    nums = radixSort(nums)
+    res = 0 
+    for i in range(1,len(num)):
+        res = max(nums[i]-nums[i-1],res)
+    return res
+```
