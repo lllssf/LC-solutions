@@ -579,3 +579,39 @@ def maxgap(nums):
         res = max(nums[i]-nums[i-1],res)
     return res
 ```
+### #287
+这道题先是要证明，这很简单，根据抽屉原理n个抽屉分配n+1个数，必有两个数分配在同一抽屉。接下来要找出这个重复的数我就用了Counter，算法复杂度是o(n)：
+
+```
+from collections import Counter
+def findDup(nums):
+    n = Counter(nums)
+    for i in nums:
+        if n[i]>1:
+            return i
+```
+实际上，这道题据说花费了Don Knuth 24h才解出来。而且第二问存在四个约束条件。
+> 解决本题的主要技巧就是要注意到：重复元素对应于一对下标i != j满足f(i) == f(j).我们的任务就变成寻找一对(i, j).
+寻找这个重复值的问题就变成计算机科学界一个广为人知的“环检测”问题。给定一个p型序列，在线性时间，只使用常数空间寻找环的起点，这个算法是由Robert Floyd提出的“龟兔”算法。算法的美妙之处在于只用o(1)的额外存储空间来记录slow指针和fast指针（第一部分），以及finder指针（第二部分）。运行时间复杂度为o(n)
+
+
+```
+def findDup1(nums):
+    slow = fast = 0
+    # keep advancing "slow" by one step and "fast" by two steps
+    # until they meet inside the loop 
+    while True:
+        slow = nums[slow]
+        fast = nums[nums[fast]]
+        if slow == fast:
+            break 
+    # Start up another pointer from the end of the array and march
+    # it forward until it hits the pointer inside the array
+    finder = 0
+    while True:
+        slow = nums[slow]
+        finder = nums[finder]
+        # If the two hit, the intersection index is the duplicate element
+        if slow == finder:
+            return slow
+```
