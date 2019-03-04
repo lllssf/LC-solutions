@@ -592,8 +592,9 @@ def findDup(nums):
 ```
 实际上，这道题据说花费了Don Knuth 24h才解出来。而且第二问存在四个约束条件。
 > 解决本题的主要技巧就是要注意到：重复元素对应于一对下标i != j满足f(i) == f(j).我们的任务就变成寻找一对(i, j).
-寻找这个重复值的问题就变成计算机科学界一个广为人知的“环检测”问题。给定一个p型序列，在线性时间，只使用常数空间寻找环的起点，这个算法是由Robert Floyd提出的“龟兔”算法。算法的美妙之处在于只用o(1)的额外存储空间来记录slow指针和fast指针（第一部分），以及finder指针（第二部分）。运行时间复杂度为o(n)
-
+寻找这个重复值的问题就变成计算机科学界一个广为人知的“环检测”(**cycle detection** or **cycle finding**)问题。给定一个p型序列，在线性时间，只使用常数空间寻找环的起点，这个算法是由Robert Floyd提出的“龟兔”算法(**Floyd's tortoise and the hare algorithm**) 。算法的美妙之处在于只用o(1)的额外存储空间来记录slow指针和fast指针（第一部分），以及finder指针（第二部分）。运行时间复杂度为o(n)
+> 1. 第一步，让fast指针前进的速度是slow指针的倍数，当它们第一次相遇时，停下。设环起点距离列表起点为m，环的长度为n，它们相遇时距离环起点的距离为k，则slow走过的距离 i = m+a* n+k, fast走过的距离为2i = m+b* n+k, 距离相减可以得到 i = (b-a)* n, 说明slow和fast走过的距离都是环长的倍数；
+> 2. 第二步，让一个指针不动，另一指针移动到列表起点，两者同步移动，则相遇点即为环起点。如slow不动，fast移动到列表起点，更名为finder。当finder到达环起点，即移动m距离时，slow移动了m+i，而i为环长的倍数，也就是说slow也在环起点，所以slow和finder相遇点即为环起点。
 
 ```
 def findDup1(nums):
@@ -613,5 +614,5 @@ def findDup1(nums):
         finder = nums[finder]
         # If the two hit, the intersection index is the duplicate element
         if slow == finder:
-            return slow
+            return finder
 ```
