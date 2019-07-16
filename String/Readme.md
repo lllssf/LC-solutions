@@ -5,3 +5,5 @@
 ```
 return s[::-1]
 ```
+### #392
+用两个指针or用iterator & generator
