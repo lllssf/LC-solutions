@@ -1,7 +1,5 @@
 # LeetCode刷题记录
 
-[toc]
-
 按照网上给出的分类和刷题建议整理。
 
 ## Array
@@ -1153,8 +1151,6 @@ class Solution:
         return dp[0]
 ```
 
-
-
 #### #152 [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 
 DP不熟悉的时候很容易将该题的状态定义为1d数组，然后状态转移方程定义为$dp[i] = dp[i-1] * nums[i]$时就会发现对于$nums[i]$为正/负数的情况无法区分，因为$nums[i]$为正时应与max_product相乘，而$nums[i]$为负时应与最小值相乘。因此状态应具备存储max_product & min_product的能力。
@@ -1211,5 +1207,64 @@ class Solution:
         return max(dp)
 ```
 
-算法时间度是$O(N)$，
+算法时间度是$O(N)$，主要问题在第二个循环，考虑用二分查找来替代。巧妙之处在于将nums[i]插入nums[:i-1]中的维护的LIS中，是替换比nums[i]大的第一个数，这样保证当前LIS的长度是正确的。
+
+```python
+import math
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        lis = [nums[0]]
+        for i in range(1, len(nums)):
+            if nums[i] > lis[-1]:
+                lis.append(nums[i])
+            elif nums[i] <= lis[0]:
+                lis[0] = nums[i]
+            else:
+                begin, end = 0, len(lis)-1
+                while begin <= end:
+                    mid = math.ceil((begin + end) / 2)
+                    if nums[i] == lis[mid]:
+                        break
+                    elif nums[i] < lis[mid]:
+                        end = mid - 1
+                    else:
+                        begin = mid + 1
+                mid = math.ceil((begin + end) / 2)
+                lis[mid] = nums[i]
+        return len(lis)  
+```
+
+### 2-D
+
+#### #64 [ Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/description/)
+
+1. 状态：$dp[i][j]$, 从终点到当前位置最小的路径和
+2. DP方程：$dp[i][j] = min(dp[i+1][j], dp[i][j+1])$
+3. 初始状态：$dp[-1][-1] = nums[-1][-1]$
+4. 结果：$dp[0][0]$
+
+```python
+class Solution:
+    def minPathSum(self, grid: List[List[int]]) -> int:
+        m = len(grid)
+        n = len(grid[0])
+        dp = [[0 for j in range(n)] for i in range(m)]
+        for i in range(m - 1, -1, -1):
+            for j in range(n - 1, -1, -1):
+                if i == m - 1 and j == n - 1:
+                    dp[i][j] = grid[i][j]
+                elif i == m - 1 and j < n - 1:
+                    dp[i][j] = dp[i][j + 1] + grid[i][j]
+                elif j == n - 1 and i < m - 1:
+                    dp[i][j] = dp[i + 1][j] + grid[i][j]
+                else:
+                    dp[i][j] = min(dp[i + 1][j], dp[i][j + 1]) + grid[i][j]
+        return dp[0][0]
+```
+
+### simplification
+
+#### #198 [ House Robber](https://leetcode.com/problems/house-robber/)
+
+
 
