@@ -1,11 +1,157 @@
 # LeetCode刷题记录
 
+- [LeetCode刷题记录](#leetcode刷题记录)
+  - [Array](#array)
+    - [Primary](#primary)
+      - [#27 Remove Element](#27-remove-element)
+      - [#26 Remove Duplicates from Sorted Array](#26-remove-duplicates-from-sorted-array)
+      - [#80 Remove Duplicates from Sorted Array II](#80-remove-duplicates-from-sorted-array-ii)
+      - [#189 Rotate Array](#189-rotate-array)
+      - [#41 First Missing Positive](#41-first-missing-positive)
+      - [#299 Bulls and Cows](#299-bulls-and-cows)
+      - [#134  Gas Station](#134--gas-station)
+      - [#274  H-Index](#274--h-index)
+      - [#275  H-Index II](#275--h-index-ii)
+      - [#243 Shortest Word Distance](#243-shortest-word-distance)
+      - [#244  Shortest Word Distance II](#244--shortest-word-distance-ii)
+      - [#245  Shortest Word Distance III](#245--shortest-word-distance-iii)
+      - [#217  Contains Duplicate](#217--contains-duplicate)
+      - [#55  Jump Game](#55--jump-game)
+      - [#45  Jump Game II](#45--jump-game-ii)
+      - [#121  Best Time to Buy and Sell Stock](#121--best-time-to-buy-and-sell-stock)
+      - [#122  Best Time to Buy and Sell Stock II](#122--best-time-to-buy-and-sell-stock-ii)
+      - [#123  Best Time to Buy and Sell Stock III](#123--best-time-to-buy-and-sell-stock-iii)
+      - [#188  Best Time to Buy and Sell Stock IV](#188--best-time-to-buy-and-sell-stock-iv)
+      - [#309  Best Time to Buy and Sell Stock with Cooldown](#309--best-time-to-buy-and-sell-stock-with-cooldown)
+      - [#11  Container With Most Water](#11--container-with-most-water)
+      - [#42  Trapping Rain Water](#42--trapping-rain-water)
+      - [#334  Increasing Triplet Subsequence](#334--increasing-triplet-subsequence)
+      - [#128 Longest Consecutive Sequence](#128-longest-consecutive-sequence)
+      - [#164   Maximum Gap](#164---maximum-gap)
+      - [#287  Find the Duplicate Number](#287--find-the-duplicate-number)
+    - [Medium](#medium)
+      - [#4  Median of Two Sorted Arrays](#4--median-of-two-sorted-arrays)
+      - [#321  Create Maximum Number](#321--create-maximum-number)
+      - [#327  Count of Range Sum](#327--count-of-range-sum)
+      - [#289  Game of Life](#289--game-of-life)
+    - [Counter](#counter)
+      - [#239  Sliding Window Maximum](#239--sliding-window-maximum)
+      - [#350 Intersection of Two Arrays II](#350-intersection-of-two-arrays-ii)
+  - [String](#string)
+    - [Primary](#primary-1)
+      - [#28 Implement strStr()](#28-implement-strstr)
+      - [#14  Longest Common Prefix](#14--longest-common-prefix)
+      - [#58  Length of Last Word](#58--length-of-last-word)
+      - [#387 First Unique Character in a String](#387-first-unique-character-in-a-string)
+      - [#383  Ransom Note](#383--ransom-note)
+      - [#344  Reverse String](#344--reverse-string)
+      - [#151  Reverse Words in a String](#151--reverse-words-in-a-string)
+      - [#186 Reverse Words in a String II](#186-reverse-words-in-a-string-ii)
+      - [#345 Reverse Vowels of a String](#345-reverse-vowels-of-a-string)
+      - [#205  Isomorphic Strings](#205--isomorphic-strings)
+      - [#293 Flip Game](#293-flip-game)
+      - [#294  Flip Game II](#294--flip-game-ii)
+      - [#290 Word Pattern](#290-word-pattern)
+      - [#242  Valid Anagram](#242--valid-anagram)
+      - [#49  Group Anagrams](#49--group-anagrams)
+      - [#249 Group Shifted Strings](#249-group-shifted-strings)
+      - [#87  Scramble String](#87--scramble-string)
+      - [#179 Largest Number](#179-largest-number)
+      - [#6  ZigZag Conversion](#6--zigzag-conversion)
+      - [#161  One Edit Distance](#161--one-edit-distance)
+      - [#38  Count and Say](#38--count-and-say)
+      - [#358  Rearrange String k Distance Apart](#358--rearrange-string-k-distance-apart)
+      - [#316 Remove Duplicate Letters](#316-remove-duplicate-letters)
+      - [#271 Encode and Decode Strings](#271-encode-and-decode-strings)
+      - [#168  Excel Sheet Column Title](#168--excel-sheet-column-title)
+      - [#171  Excel Sheet Column Title](#171--excel-sheet-column-title)
+      - [#13  Roman to Integer](#13--roman-to-integer)
+      - [#12  Integer to Roman](#12--integer-to-roman)
+      - [#273  Integer to English Words](#273--integer-to-english-words)
+      - [#246 Strobogrammatic Number](#246-strobogrammatic-number)
+      - [#247  Strobogrammatic Number II](#247--strobogrammatic-number-ii)
+      - [#248 Strobogrammatic Number III](#248-strobogrammatic-number-iii)
+    - [Medium](#medium-1)
+      - [#157 Read N Characters Given Read4](#157-read-n-characters-given-read4)
+      - [#158 Read N Characters Given Read4 II - Call multiple times](#158-read-n-characters-given-read4-ii---call-multiple-times)
+      - [#68  Text Justification](#68--text-justification)
+      - [#65  Valid Number](#65--valid-number)
+      - [#424 Longest Repeating Character Replacement](#424-longest-repeating-character-replacement)
+    - [Parentheses](#parentheses)
+      - [#20  Valid Parentheses](#20--valid-parentheses)
+      - [#22 Generate Parentheses](#22-generate-parentheses)
+  - [Math](#math)
+    - [Primary](#primary-2)
+      - [#7 Reverse Integer](#7-reverse-integer)
+      - [#165 Compare Version Numbers](#165-compare-version-numbers)
+      - [#66  Plus One](#66--plus-one)
+      - [#8 String to Integer (atoi)](#8-string-to-integer-atoi)
+      - [#258  Add Digits](#258--add-digits)
+      - [#67 Add Binary](#67-add-binary)
+      - [#43  Multiply Strings](#43--multiply-strings)
+      - [#29  Divide Two Integers](#29--divide-two-integers)
+      - [#69 Sqrt(x)](#69-sqrtx)
+      - [#50 Pow(x, n)](#50-powx-n)
+      - [#367 Valid Perfect Square](#367-valid-perfect-square)
+      - [#365 Water and Jug Problem](#365-water-and-jug-problem)
+      - [#204 Count Primes](#204-count-primes)
+    - [SUM](#sum)
+      - [#1  Two Sum](#1--two-sum)
+      - [#167  Two Sum II - Input array is sorted](#167--two-sum-ii---input-array-is-sorted)
+      - [#15  3Sum](#15--3sum)
+      - [#16  3Sum Closest](#16--3sum-closest)
+      - [#259  3Sum Smaller](#259--3sum-smaller)
+      - [#18  4Sum](#18--4sum)
+  - [Tree](#tree)
+    - [Primary](#primary-3)
+      - [#144 Binary Tree Preorder Traversal](#144-binary-tree-preorder-traversal)
+      - [#94 Binary Tree Inorder Traversal](#94-binary-tree-inorder-traversal)
+      - [#145 Binary Tree Postorder Traversal](#145-binary-tree-postorder-traversal)
+      - [#102 Binary Tree Level Order Traversal](#102-binary-tree-level-order-traversal)
+    - [Preorder](#preorder)
+      - [#100  Same Tree](#100--same-tree)
+      - [#101 Symmetric Tree](#101-symmetric-tree)
+      - [#226 Invert Binary Tree](#226-invert-binary-tree)
+      - [#257  Binary Tree Paths](#257--binary-tree-paths)
+      - [#112  Path Sum](#112--path-sum)
+      - [#113 Path Sum II](#113-path-sum-ii)
+      - [#129 Sum Root to Leaf Numbers](#129-sum-root-to-leaf-numbers)
+      - [#298  Binary Tree Longest Consecutive Sequence](#298--binary-tree-longest-consecutive-sequence)
+      - [#111 Minimum Depth of Binary Tree](#111-minimum-depth-of-binary-tree)
+    - [Postorder](#postorder)
+      - [#104 Maximum Depth of Binary Tree](#104-maximum-depth-of-binary-tree)
+      - [#110  Balanced Binary Tree](#110--balanced-binary-tree)
+      - [#124  Binary Tree Maximum Path Sum](#124--binary-tree-maximum-path-sum)
+      - [#250  Count Univalue Subtrees](#250--count-univalue-subtrees)
+      - [#366  Find Leaves of Binary Tree](#366--find-leaves-of-binary-tree)
+      - [#337  House Robber III](#337--house-robber-iii)
+  - [Linked List](#linked-list)
+    - [Primary](#primary-4)
+      - [#206  Reverse Linked List](#206--reverse-linked-list)
+      - [#141 Linked List Cycle](#141-linked-list-cycle)
+      - [#24  Swap Nodes in Pairs](#24--swap-nodes-in-pairs)
+  - [Dynamic Programming](#dynamic-programming)
+    - [1-Dimention](#1-dimention)
+      - [#70  Climbing Stairs](#70--climbing-stairs)
+      - [#62  Unique Paths](#62--unique-paths)
+      - [#63  Unique Paths II](#63--unique-paths-ii)
+      - [#53 Maximum Subarray](#53-maximum-subarray)
+      - [#120 Triangle](#120-triangle)
+      - [#322 Coin Change](#322-coin-change)
+      - [#279  Perfect Squares](#279--perfect-squares)
+      - [#152 Maximum Product Subarray](#152-maximum-product-subarray)
+      - [#300 Longest Increasing Subsequence](#300-longest-increasing-subsequence)
+    - [2-D](#2-d)
+      - [#64  Minimum Path Sum](#64--minimum-path-sum)
+    - [simplification](#simplification)
+      - [#198  House Robber](#198--house-robber)
+    - [股票买卖系列](#股票买卖系列)
+
 按照网上给出的分类和刷题建议整理。
 
 ## Array
 
 ### Primary
-
 #### #27 [Remove Element](https://leetcode.com/problems/remove-element/)
 
 ```python
@@ -17,13 +163,11 @@ def removeElement(nums,val):
             nums.remove(x)
     return len(nums)
 ```
-
 容易出现的问题就是：
 
 ```python
 for x in nums:
 ```
-
 > 我们通常尽量避免修改一个正在进行遍历的列表，可以使用**切片操作克隆这个list**来避免这个问题（浅拷贝）
 
 #### #26 [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
@@ -39,11 +183,9 @@ class Solution:
                 i += 1
         return len(nums)
 ```
-
 #### #80 [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/)
 
 因为都是有序数列所以和上一题思路一样
-
 ```python
 def removeDuplicates(nums):
     dupnums = [x for x in nums]
@@ -71,67 +213,57 @@ class Solution:
         nums[:k] = nums[k-1::-1]
         nums[k:] = nums[:k-1:-1]
 ```
-
 要注意的是，reverse()不能反转部分数组，要想反转部分可以使用切片。
 
 #### #41 [First Missing Positive](https://leetcode.com/problems/first-missing-positive/description/)
 
 ```python
-def firstMissingPositive1(nums):
-    #先考虑特殊情况
-    if nums == []:
+# O(NLogN)
+def firstMissingPositive(self, nums: List[int]) -> int:
+    if not nums:
         return 1
-    if len(nums) == 1:
-        if nums[0] <1 or nums[0] >1:
-            return 1
-        else:
-            return 2
     nums.sort()
-    for x in nums[:]:
-        if x < 1:
-            nums.remove(x)
-    if nums == [] or nums[0]>1:
-        return 1
-    for i in range(len(nums)-1):
-        if nums[i] + 1 !=nums[i+1]:
-            return nums[i]+1
-    return nums[-1]+1
+    res = 1
+    for i in nums:
+        if i > 0:
+            if i > res:
+                return res
+            if i == res:
+                res += 1
+    return res
+
+# O(N)
+def firstMissingPositive(self, nums: List[int]) -> int:
+        index = [0 for i in range(len(nums))]
+        for i in nums:
+            if i > 0 and i <= len(index):
+                index[i-1] += 1
+        for i in range(len(index)):
+            if index[i] == 0:
+                return i+1
+        return len(nums)+1
 ```
-
-这个在LeetCode测试是16ms，快于100%
-
 #### #299 [Bulls and Cows](https://leetcode.com/problems/bulls-and-cows/)
 
-这道题开始忘了用dict，在计算cow的时候很笨的用了两层循环
-
 ```python
-def getHint(secret,guess):
-    bull = 0
-    cow = 0
-    index = list(range(len(secret)))
-    # calculate the value of bulls and get rid of its index
-    for i in index[:]:
-        if secret[i] == guess[i]:
-            bull += 1
-            index.remove(i)
-    # get the value of cows
-    for i in index[:]:
-        for j in range(len(guess)):
-            if secret[i] == guess[j] and j in index: # to avoid being counted before
-                cow += 1
-                index.remove(j)
-                break
-    return '%sA%sB' %(bull,cow)
-
-print(getHint('1123','0111'))
+def getHint2(secret,guess):
+    num_a = sum([i == j for (i, j) in zip(secret, guess)])
+    num_b = 0
+    if num_a == len(secret) - 1:
+        return str(num_a) + 'A' + str(num_b) + 'B'
+    count_s = collections.Counter(secret)
+    count_g = collections.Counter(guess)
+    num_a = sum([i == j for (i, j) in zip(secret, guess)])
+    for i in count_s:
+        num_b += min(count_s.get(i, 0), count_g.get(i, 0))
+    num_b -= num_a
+    return str(num_a) + 'A' + str(num_b) + 'B'
 ```
-
-运行速度很慢
-然后在高票答案里发现了一个很简单的解法    
+在高票答案里发现了一个很pythonic的写法
 
 ```python
 from collections import Counter
-def getHint1(secret,guess):
+def getHint(secret,guess):
     '''
     use Counter to count guess and secret and sum their overlap.
     use zip to counter bulls
@@ -143,48 +275,24 @@ def getHint1(secret,guess):
 
 print(getHint1('1123','0111'))
 ```
-
-与这个解法思路类似用dict的话：
-
-```python
-def getHint2(secret,guess):
-    bull = 0
-    cow = 0
-    counts = {} #caiculate the counts of s
-    for i,s in enumerate(secret):
-        if s == guess[i]:
-            bull += 1
-        else:
-            counts[s] = counts.get(s,0) + 1
-    for i,s in enumerate(secret):
-        if guess[i]!= s and counts.get(guess[i],0)!=0:
-            cow += 1
-            counts[guess[i]] -= 1
-    return '%sA%sB' %(bull,cow)
-
-print(getHint2('1123','0111'))
-```
-
-后两种算法的计算速度和内存占用量都差不多
-
 #### #134 [ Gas Station](https://leetcode.com/problems/gas-station/description/)
 
-```
+```python
 def canCompleteCircuit(gas,cost):
-    remain = list(map(lambda x:x[0]-x[1],zip(gas,cost)))
-    if sum(remian)<0:
+    remain = [i-j for i,j in zip(gas,cost)]
+    if sum(remain) < 0:
         return -1
-    accumulate,start =0,0
-    for i in range(remain):
-        accumulate += reamin[i]
-        if accumulate < 0:
-            accumulate,start = 0,i+1
-    return start
+    res = sum_remain = 0
+    for i in range(len(remain)):
+        sum_remain += remain[i]
+        if sum_remain < 0:
+            sum_remain = 0
+            res = i+1
+    return res
 ```
-
 内存占用更少的解法：
 
-```
+```python
 def canComplateCircuit1(gas,cost):
     start,overall,accumulate = 0,0,0
     for i in range(gas):
@@ -194,139 +302,250 @@ def canComplateCircuit1(gas,cost):
             start,accumulate = i+1,0
     return start if overall>0 else -1
 ```
-
 #### #274 [ H-Index](https://leetcode.com/problems/h-index/description/)
 
 关于h指数的定义，先看了百度百科：
-
-> 被引次数从高到低排列，直到谋篇论文的序号大于该论文被引次数，那个序号减去1就是h
+> 被引次数从高到低排列，直到某篇论文的序号大于该论文被引次数，那个序号减去1就是h
 
 按照这个思路：
 
-```
+```python
 def hIndex(citaions):
-    if citaions == [] or citations ==[0]:
-        return 0
-    citaions.sort()
-    citaions.reverse()
-    for h,c in enumerate(citaions):
-        if h+1 > c:
-            return h
-    return len(citaions)
+    citations = sorted(citations, reverse=True)
+    for index,num in enumerate(citations):
+        if index >= num:
+            return index
+    return len(citations)
 ```
-
-测试时间16ms，内存占用10.8MB
-
 #### #275 [ H-Index II](https://leetcode.com/problems/h-index-ii/description/)
 
-与上一题一样，只是用了**二分查找**
+与上一题一样，只是因为需要对数时间复杂度，因此用了**二分查找**，需要注意等号的位置
 
-```
-def hIndex_bi(citations):
-    xitations.reverse()
-    low, high = 1, len(citations)
-    while low <= high:
-        mid = (low + high) / 2
-        if mid == citations[mid-1]:
-            return mid
-        elif mid < citations[mid-1]:
-            low = mid + 1
-        else:
-            high = mid - 1
-    return low-1
+```python
+def hIndex(self, citations: List[int]) -> int:
+        small, big = 0, len(citations)-1
+        while small <= big:
+            res = (big + small) // 2
+            if len(citations) - res <= citations[res]:
+                big = res - 1
+            else:
+                small = res + 1
+        return len(citations) - small
 ```
 
+#### #243 [Shortest Word Distance](https://leetcode-cn.com/problems/shortest-word-distance)
+
+暴力求解
+
+```python
+def shortestDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:
+        index1, index2 = [], []
+        for i, word in enumerate(wordsDict):
+            if word == word1:
+                index1.append(i)
+            if word == word2:
+                index2.append(i)
+        res = len(wordsDict)
+        for i in index1:
+            res = min(min([abs(i-x) for x in index2]), res)
+        return res
+```
+
+O(N) 解法
+
+```python
+def shortestDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:
+        index1 =  index2 = -1
+        res = len(wordsDict)
+        for i, word in enumerate(wordsDict):
+            if word == word1:
+                index1 = i
+            if word2 == word:
+                index2 = i 
+            if index1 >= 0 and index2 >= 0:
+                res = min(res, abs(index1 - index2))
+        return res
+```
+
+#### #244 [ Shortest Word Distance II](https://leetcode-cn.com/problems/shortest-word-distance-ii)
+
+与上一题相比，因为要处理多组数据，所以构造字典来提高运算速度，否则会有超时错误：
+
+```python
+class WordDistance:
+
+    def __init__(self, wordsDict: List[str]):
+        self.wordsDict = wordsDict
+        self.locations = {}
+        for i,word in enumerate(wordsDict):
+            if word in self.locations:
+                self.locations[word].append(i)
+            else:
+                self.locations[word] = [i]
+
+    def shortest(self, word1: str, word2: str) -> int:
+        index1 = index2 = 0
+        location1 = self.locations[word1]
+        location2 = self.locations[word2]
+        res = len(self.wordsDict)
+        while index1 < len(location1) and index2 < len(location2):
+            res = min(res, abs(location1[index1] - location2[index2]))
+            if location1[index1] < location2[index2]:
+                index1 += 1
+            else:
+                index2 += 1
+        return res 
+```
+
+但暴力解法的实际运算速度比上一种方法快，且节省内存：
+
+```python
+class WordDistance:
+
+    def __init__(self, wordsDict: List[str]):
+        self.dict = defaultdict(list)
+        for i, word in enumerate(wordsDict):
+            self.dict[word].append(i)
+
+    def shortest(self, word1: str, word2: str) -> int:
+        return min(abs(p1 - p2) for p1 in self.dict[word1] for p2 in self.dict[word2])
+```
+
+#### #245 [ Shortest Word Distance III](https://leetcode-cn.com/problems/shortest-word-distance-iii)
+
+```python
+def shortestWordDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:
+        res = len(wordsDict)
+        index1 = -1
+        if word1 == word2:
+            for i, word in enumerate(wordsDict):
+                if word == word1:
+                    if index1 >= 0:
+                        res = min(res, i - index1)
+                    index1 = i 
+            return res 
+        index2 = -1
+        for i, word in enumerate(wordsDict):
+            if word == word1:
+                index1 = i 
+            if word == word2:
+                index2 = i 
+            if index1 >= 0 and index2 >= 0:
+                res = min(res, abs(index2-index1))
+        return res 
+```
 
 #### #217 [ Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)
 
-开始我用的前面学到的Counter模块
+用Counter
 
+```python
+def containsDuplicate(self, nums: List[int]) -> bool:
+        counts = collections.Counter(nums)
+        for i in counts:
+            if counts[i] > 1:
+                return True
+        return False
 ```
-from collections import Counter
-def containsDupliacte(nums):
-    n = Counter(nums)
-    for num in nums:
-        if n[num] > 1:
-            return True
-    return False
-```
+看到一个很棒的解答：
 
-然后又看到一个很棒的解答：
-
-```
+```python
 def containDuplicate1(nums):
     return len(set(nums)) != len(nums)
 ```
-
-> set()创建一个无序不重复元素集
-
 #### #55 [ Jump Game](https://leetcode.com/problems/jump-game/description/)
 
-> **广度优先搜索BFS**(breadth-first search) 适用于解决“**最短路径问题**”(shortest-path problem)。解决这类问题：
->
-> 1. 使用图来建立问题模型
-> 2. 使用广度优先搜索解决问题  
+**广度优先搜索BFS**(breadth-first search) 适用于解决“**最短路径问题**”(shortest-path problem)。解决这类问题：
+1. 使用图来建立问题模型
 
->广度优先搜索算法可帮助回答两类问题：
->
->1. 从节点A出发，有前往节点B的路径吗？
->2. 从节点A出发，前往节点B哪条路径最短？
+2. 使用广度优先搜索解决问题  
+
+
+广度优先搜索算法可帮助回答两类问题：
+
+1. 从节点A出发，有前往节点B的路径吗？
+
+2. 从节点A出发，前往节点B哪条路径最短？
 
 这道题就是路径存在与否问题，可以依据当前最远到达距离与下一节点标号作对比。我一开始想得太过复杂了。
 
+```python
+def canJump(self, nums: List[int]) -> bool:
+        max_length = nums[0]
+        for i in range(1, len(nums)):
+            if i > max_length:
+                return False
+            max_length = max(max_length, i+nums[i])
+        return True
 ```
-def canJump(nums):
-    far = 0
-    for i, step in enumerate(nums):
-        if i > far:
-            return False
-        far = max(far,i+step)
-    return True
-```
-
 #### #45 [ Jump Game II](https://leetcode.com/problems/jump-game-ii/description/)
 
 这道题就是最短路径问题，就用到了BFS，将当前能到达的点作为第一维度的图，由第一维度才能到达的为第二维度等等以此划分，最少节点到达的路径即为最短路径。
 
-```
-def jump(nums):
-    node_start,node_end,farest,steps = 0,0,0,0
-    while node_end < len(nums)-1:
-        steps += 1
-        for i in range(node_start,node_end+1):
-            if i+nums[i] > len(nums)-1:
-                return steps
-            farest = max(farest,i+num[i])
-        node_end,node_start = farest,node_end+1
-    return steps
-```
-
-#### #121 [ Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
-
-```
-def maxprofit(prices):
-    buy,profit = float('inf'),0
-    for p in prices:
-        buy = min(buy,p)
-        profit = max(profit, p-buy)
-    return profit
-```
-
-#### #122 [ Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/)
-
-维护buy和sale的日期，如果某日的价格小于当前sale日的价格，则出售，且buy和sale的价格更新为当日，若某日价格大于当前sale日的价格，则sale日期更新为当日。循环结束记得还要抛售。
+最开始的解答：
 
 ```python
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        buy, sale, profit = 0, 0, 0
-        for i in range(1, len(prices)):
-            if prices[i] < prices[sale]:
-                profit += prices[sale] - prices[buy]
-                buy, sale = i, i
-            if prices[i] > prices[buy]:
-                sale = i
-        profit += prices[sale] - prices[buy]
+def jump(self, nums: List[int]) -> int:
+        if len(nums) <= 1:
+            return 0
+        max_length =  nums[0]
+        if max_length >= len(nums)-1: return 1
+        start_node = 0
+        steps = 1
+        while start_node < len(nums) -1:
+            nodes = start_node
+            for i in range(nodes+1, nodes+1+nums[nodes]):
+                if i+nums[i] >= len(nums) - 1:
+                    return steps+1
+                if i+nums[i] >= max_length:
+                    start_node = i 
+                    max_length = i + nums[i]
+            steps += 1
+        return steps
+```
+
+官方提供的O(N)解答（有修改）
+
+```python 
+def jump(self, nums: List[int]) -> int:
+        max_length, steps, farest_node = 0,0,0
+        for i in range(len(nums)-1):
+            if i <=  max_length:
+                max_length = max(max_length, nums[i]+i)
+                if max_length >= len(nums) - 1:
+                        return steps+1
+                # 如果超过了当前可到达节点，则更新下一跳可到达最远节点
+                if i == farest_node:
+                    steps += 1
+                    farest_node = max_length             
+        return steps
+```
+#### #121 [ Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
+
+```python
+def maxProfit(self, prices: List[int]) -> int:
+        buy = prices[0]
+        profit = 0
+        for i in prices[1:]:
+            if i < buy:
+                buy = i
+            if i > buy:
+                profit = max(profit, i - buy)
+        return profit
+```
+#### #122 [ Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/)
+
+贪心算法
+
+```python
+def maxProfit(self, prices: List[int]) -> int:
+        buy, profit = prices[0], 0
+        for i in prices[1:]:
+            if i < buy:
+                buy = i 
+            else:
+                profit += i-buy
+                buy = i 
         return profit
 ```
 
@@ -336,36 +555,50 @@ class Solution:
 def maxProfit(prices):
     return sum(x[0]-x[1] for x in zip(prices[1:],prices[:-1]) if x[0]>x[1] )
 ```
-
 #### #123 [ Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/)
+开始写得很复杂，用了两层循环，超出了时间限制：
 
-开始写得很复杂，后来看到了用**前后遍历**的算法的简单解法，豁然开朗：
-
-```
-def maxProfit(self,prices):
-    n = len(prices)
-    if n <= 1:
-        return 0
-    forward_profit,backward_profit = [0]*n,[0]*n
-    buy = prices[0]
-    for i in range(1,n):
-        buy = min(buy,prices[i])
-        forward_profit[i] = max(forward_profit[i-1],prices[i]-buy)
-
-    sell = prices[-1]
-    for i in range(n-2,-1,-1):
-        sell = max(sell,prices[i])
-        backward_profit[i] = max(backward_profit[i+1],sell-prices[i])
-
-    maxprofit = 0
-    for i in range(n):
-        maxprofit = max(maxprofit,forward_profit[i]+backward_profit[i])
-
-    return maxprofit
+```python
+def maxProfit(self, prices: List[int]) -> int:
+        buy1 = buy2 = prices[0]
+        profit1 = 0
+        max_profit = 0
+        for i in range(1, len(prices)):
+            if  prices[i] < buy1:
+                buy1 = prices[i] 
+            if prices[i] > buy1:
+                profit1 = prices[i] - buy1
+                profit2 = 0
+                if i < len(prices) - 2:
+                    buy2 = prices[i+1]
+                    for j in prices[i+2:]:
+                        if j < buy2:
+                            buy2 = j 
+                        if j > buy2:
+                            profit2 = max(profit2, j-buy2)
+                max_profit = max(max_profit, profit2+profit1)
+        return max_profit
 ```
 
+后来看到了用**前后遍历**的算法的简单解法，豁然开朗：
+
+```python 
+def maxProfit(self, prices: List[int]) -> int:
+        buy1 = prices[0]
+        n = len(prices)
+        profit1, profit2 = [0]*n, [0]*n
+        max_profit = 0
+        for i in range(1, n):
+        	buy1 = min(prices[i], buy1)
+            profit1[i] = max(profit1[i-1], prices[i]-buy1)
+        sell2 = prices[-1]
+        for i in range(n-2, 1, -1):
+            sell2 = max(sell2, prices[i])
+            profit2[i] = max(profit2[i+1], sell2-prices[i]) 
+        max_profit = max([i+j for (i,j) in zip(profit1, profit2)])
+        return max_profit
+```
 #### #188 [ Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description/)
-
 >**动态规划DP**(Dynamic programming),是一种将问题分成子问题，先解决子问题的方法。
 
 这道题我看了各种解法，都不甚明白，后来在discuss里选了速度最快，占用内存最少的一种仔细研究，明白些许。hold[k]是k-1次操作后持有的股票收益减去买股票的金额，profit[k]是完成k次交易后得到的收益。
@@ -385,7 +618,6 @@ def maxProfit(k,prices):
 ```
 
 #### #309 [ Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/)
-
 按着上一题的思路，开始的解法如下：
 
 ```
@@ -401,11 +633,9 @@ def maxprofit(prices):
         profit[i] = max(profit[i-1],buy[i]+prices[i])
     return profit[-1]
 ```
-
 20ms，10.9MB
 
 #### #11 [ Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/)
-
 从两头开始向中间扫描
 
 ```
@@ -426,9 +656,7 @@ def maxArea(height):
                 end -= 1
     return water
 ```
-
 #### #42 [ Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)
-
 依旧用**相向型双指针算法**，要找到左边最高和右边最高。
 
 ```
@@ -448,11 +676,8 @@ def trap(height):
             end -= 1
     return water
 ```
-
 #### #334 [ Increasing Triplet Subsequence](https://leetcode.com/problems/increasing-triplet-subsequence/description/)
-
 我自己的解法是20ms，11MB
-
 ```
 def increasingTriple(nums):
     n = len(nums)
@@ -474,7 +699,6 @@ def increasingTriple(nums):
                 break
     return False
 ```
-
 Discuss里有一写法更为简单，思路相同：
 
 ```
@@ -489,11 +713,9 @@ def increasingTriplet1(nums):
             return True
     return False
 ```
-
 16ms，11.2MB
 
 #### #128 [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/description/)
-
 比较简单，第一次就20ms，11.2MB
 
 ```
@@ -513,9 +735,7 @@ def longestConsecutive(nums):
     length_max.append(length)
     return max(length_max)
 ```
-
 #### #164  [ Maximum Gap](https://leetcode.com/problems/maximum-gap/description/)
-
 用的和上一题一样的思路，第一次就20ms，11.3MB 
 
 ```
@@ -532,7 +752,6 @@ def maximumGap(nums):
     maxGap.append(gap)
     return max(maxGap)
 ```
-
 这题考察的似乎是 **桶排序(Bucket sort)/基数排序（Radix sort)** 算法,参考了最高票的Discuss，108ms，算法复杂度是O(32n)如下：
 
 ```
@@ -558,9 +777,7 @@ def maxgap(nums):
         res = max(nums[i]-nums[i-1],res)
     return res
 ```
-
 #### #287 [ Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/)
-
 这道题先是要证明，这很简单，根据抽屉原理n个抽屉分配n+1个数，必有两个数分配在同一抽屉。接下来要找出这个重复的数我就用了Counter，算法复杂度是o(n)：
 
 ```
@@ -571,12 +788,9 @@ def findDup(nums):
         if n[i]>1:
             return i
 ```
-
 实际上，这道题据说花费了Don Knuth 24h才解出来。而且第二问存在四个约束条件。
-
 > 解决本题的主要技巧就是要注意到：重复元素对应于一对下标i != j满足f(i) == f(j).我们的任务就变成寻找一对(i, j).
 > 寻找这个重复值的问题就变成计算机科学界一个广为人知的“环检测”(**cycle detection** or **cycle finding**)问题。给定一个p型序列，在线性时间，只使用常数空间寻找环的起点，这个算法是由Robert Floyd提出的“龟兔”算法(**Floyd's tortoise and the hare algorithm**) 。算法的美妙之处在于只用o(1)的额外存储空间来记录slow指针和fast指针（第一部分），以及finder指针（第二部分）。运行时间复杂度为o(n)
->
 > 1. 第一步，让fast指针前进的速度是slow指针的倍数，当它们第一次相遇时，停下。设环起点距离列表起点为m，环的长度为n，它们相遇时距离环起点的距离为k，则slow走过的距离 i = m+a* n+k, fast走过的距离为2i = m+b* n+k, 距离相减可以得到 i = (b-a)* n, 说明slow和fast走过的距离都是环长的倍数；
 > 2. 第二步，让一个指针不动，另一指针移动到列表起点，两者同步移动，则相遇点即为环起点。如slow不动，fast移动到列表起点，更名为finder。当finder到达环起点，即移动m距离时，slow移动了m+i，而i为环长的倍数，也就是说slow也在环起点，所以slow和finder相遇点即为环起点。
 
@@ -602,9 +816,7 @@ def findDup1(nums):
 ```
 
 ### Medium
-
 #### #4 [ Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)
-
 参考了Discuss关于中位数的思考：
 
 ```
@@ -841,6 +1053,36 @@ class Solution(object):
 
 #### #358 [ Rearrange String k Distance Apart](https://leetcode.com/problems/rearrange-string-k-distance-apart/description/)
 
+贪心算法，从最多的字母开始一个一个摆：
+
+```python
+class Solution:
+    def rearrangeString(self, s: str, k: int) -> str:
+        if not s:
+            return ""
+        count = Counter(s)
+        count = sorted([[key, value] for key, value in count.items()], key=lambda x:x[1], reverse=True)
+        if k == 0 or count[0][1] == 1:
+            return s
+        res = ""
+        while count:
+            i = 0
+            for _ in range(k):
+                if i >= len(count):
+                    return ""
+                res += count[i][0]
+                count[i][1] -= 1
+                if count[i][1] == 0:
+                    count.pop(i)
+                    i -= 1
+                i += 1
+                if len(res) == len(s):
+                    return res
+            count = sorted(count,key=lambda x:x[1], reverse=True)
+```
+
+
+
 #### #316 [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/description/)
 
 #### #271 [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/description/)
@@ -871,11 +1113,34 @@ class Solution(object):
 
 #### #65 [ Valid Number](https://leetcode.com/problems/valid-number/description/)
 
+#### #424 [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+
+```python
+# 维护一个最大长度的窗口
+def chracterReplacement(s, k):
+    max_len = res = 0
+    counts = collections.Counter()
+    for i in range(len(s)):
+        counts[s[i]] += 1
+        max_len = max(max_len, counts[s[i]])
+        if res - max_len < k:
+            res += 1
+        else:
+            counts[s[i - res]] -= 1  # 移动窗口
+    return res
+```
+
+
+
 ### Parentheses
 
 #### #20 [ Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
 
 用堆栈来解决
+
+#### #22 [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)
+
+DFS，剪枝
 
 
 
@@ -1082,22 +1347,76 @@ class Solution:
         return cur
 ```
 
+#### #62 [ Unique Paths](https://leetcode-cn.com/problems/unique-paths)
+
+从终点倒推，每个位置的路径数等于下方路径数与右方路径数之和，利用两层循环：
+
+```python
+def uniquePaths(self, m: int, n: int) -> int:
+        dp = [[1 for j in range(n)] for i in range(m)]
+        for i in range(m-2,-1,-1):
+            for j in range(n-2,-1,-1):
+                dp[i][j] = dp[i+1][j] + dp[i][j+1]
+        return dp[0][0]
+```
+
+这道题没有路障，也可以直接使用组合数据来计算，路径总和等于从*m+n-2*次移动中选择*m-1*次向下移动（或*n-1*次向右移动）的方案数：
+
+```python
+def uniquePaths(self, m: int, n: int) -> int:
+        return comb(m + n - 2, n - 1)
+```
+
+#### #63 [ Unique Paths II](https://leetcode-cn.com/problems/unique-paths-ii)
+
+有路障，要注意考虑“无路可走”的特殊情况，所以比起上一道题，初始状态的设计要特别注意。
+
+```python
+def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
+        if obstacleGrid[-1][-1] == 1: return 0
+        m = len(obstacleGrid)
+        n = len(obstacleGrid[0])
+        dp = [[1-obstacleGrid[i][j] for j in range(n)]for i in range(m)]
+        for i in range(m-2,-1,-1):
+            dp[i][-1] = min(dp[i+1][-1], dp[i][-1])
+        for j in range(n-2, -1, -1):
+            dp[-1][j] = min(dp[-1][j], dp[-1][j+1])
+        for i in range(m-2,-1,-1):
+            for j in range(n-2,-1,-1):
+                dp[i][j] = 0
+                if obstacleGrid[i][j] == 0:
+                    dp[i][j] = dp[i+1][j] + dp[i][j+1]
+        return dp[0][0]
+```
+
 #### #53 [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)
+
+可以很简单发现一条策略：如果当前和小于0，则子序列重新开始，在此过程中记录最大和：
+
+```python
+def maxSubArray(self, nums: List[int]) -> int:
+        max_sum, cur_sum = nums[0], nums[0]
+        for i in nums[1:]:
+            if cur_sum < 0:
+                cur_sum = i 
+            else:
+                cur_sum += i 
+            max_sum = max(max_sum, cur_sum)
+        return max_sum
+```
 
 这道题很容易找到状态转移方程：$opt(n) = max(opt(n-1) + nums[n], nums[n]) $,但关键在于最终返回的不是opt(n)，而是$max(opt(1), opt(2), ..., opt(n))$
 
 ```python
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        if len(nums) == 1:
-            return nums[0]
-        res = [nums[0]]
-        for i in range(1,len(nums)):
-            if res[i-1] > 0:
-                res.append(res[i-1] + nums[i])
+        max_sum = [nums[0]] * len(nums)
+        for i in range(1, len(nums)):
+            if max_sum[i-1] < 0:
+                max_sum[i] = nums[i]
             else:
-                res.append(nums[i])
-        return max(res)
+                max_sum[i] = max_sum[i-1] + nums[i]
+        return max(max_sum)
 ```
 
 进一步，可以简化为（用max()比条件判断更占用内存）：
@@ -1137,11 +1456,11 @@ class Solution:
         return dp[0][0]
 ```
 
-用二维数组浪费空间，实际每次只需要存储一层的结果，用一位数组即可：
+用二维数组浪费空间，实际每次只需要存储一层的结果即可：
 
 ```python
-class Solution:
-    def minimumTotal(self, triangle: List[List[int]]) -> int:
+# 从底向上算
+def minimumTotal(self, triangle: List[List[int]]) -> int:
         if len(triangle) == 1:
             return triangle[0][0]
         dp = triangle[-1]
@@ -1149,7 +1468,43 @@ class Solution:
             for j in range(len(triangle[i])):
                 dp[j] = min(dp[j], dp[j+1]) + triangle[i][j]
         return dp[0]
+ # 从上向下算
+def minimumTotal(self, triangle: List[List[int]]) -> int:
+        if len(triangle) == 1: return triangle[0][0]
+        per = [triangle[0][0]]
+        for i in range(1,len(triangle)):
+            cur = triangle[i]
+            for j in range(i+1):
+                if j == 0:
+                    cur[j] += per[j]
+                elif j == i:
+                    cur[j] += per[j-1]
+                else:
+                    cur[j] += min(per[j-1], per[j])
+            per = cur[:]
+        return min(cur)
 ```
+
+#### #322 [Coin Change](https://leetcode-cn.com/problems/coin-change/)
+
+经典的硬币找零问题，暴力求解太耗时，贪心算法容易陷入局部最优，因此还是用动态规划解决：
+
+状态转移方程：$dp[n] = min(dp[n-coins[j]])+1$
+
+```python
+def coinChange(self, coins: List[int], amount: int) -> int:
+        dp = [amount+1] * (amount+1)
+        dp[0] = 0
+        for i in range(1, amount+1):
+            for j in coins:
+                if j <= i:
+                    dp[i] = min(dp[i], dp[i-j]+1)                
+        return dp[amount] if dp[amount] < amount+1 else -1
+```
+
+#### #279 [ Perfect Squares](https://leetcode-cn.com/problems/perfect-squares)
+
+
 
 #### #152 [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 
@@ -1266,5 +1621,17 @@ class Solution:
 
 #### #198 [ House Robber](https://leetcode.com/problems/house-robber/)
 
+$dp[i] = max(dp[i-2],dp[i-3],...)+ nums[i]$
 
-
+```python
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
+        if len(nums) <= 2:
+            return max(nums)
+        dp = [nums[0], nums[1]]
+        for i in range(2, len(nums)):
+            dp.append(max(dp[:i-1]) + nums[i])
+        return max(dp)
+```
